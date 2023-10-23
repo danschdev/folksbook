@@ -13,10 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
+First argument defines the URI
+*/
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome'); 
 });
 
+/*
+Second argument is data parameters
+*/
 Route::get('/hello', function () {
-    return view('hello');
+    return view('hello' , ['name' => 'Daniel']); 
 });
