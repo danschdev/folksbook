@@ -1,6 +1,6 @@
 # Folksbook - Todos
 ## Message basics
-* (/) Display a single message (page)
+* Display a single message (page)
 * Show an array of messages on a portal (page)
 ## User management
 * Define users

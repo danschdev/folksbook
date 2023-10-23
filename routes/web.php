@@ -21,13 +21,18 @@ Route::get('/', function () {
     return view('welcome'); 
 });
 
-/*
-Second argument is data parameters
-*/
 Route::get('/hello', function () {
     return view('hello' , ['name' => 'Daniel']); 
 });
 
 Route::get('/message', function () {
     return view('message', ['message' => new Message('Welcome to Folksbook!')]);
+});
+
+Route::get('/portal', function () {
+    $messages = [
+        new Message('Welcome to Folksbook!'),
+        new Message('Meet your friends and connect with new people')
+    ];
+    return view('portal', ['messages' => $messages]);
 });
