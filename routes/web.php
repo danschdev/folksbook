@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Message;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +26,8 @@ Second argument is data parameters
 */
 Route::get('/hello', function () {
     return view('hello' , ['name' => 'Daniel']); 
+});
+
+Route::get('/message', function () {
+    return view('message', ['message' => new Message('Welcome to Folksbook!')]);
 });
