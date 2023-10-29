@@ -19,7 +19,7 @@
         @foreach ($messages as $message)
             <div class="flex font-serif">
                 <div class="flex-none w-52 relative">
-                    <p>Platzhalter Metadaten</p>
+                    <p>{{$message->getCreated()->format('d.m.Y H:i')}}</p>
                 </div>
                 <div class="flex flex-wrap items-baseline">
                     <blockquote>
