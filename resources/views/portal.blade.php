@@ -17,12 +17,17 @@
     </head>
     <body class="antialiased">
         @foreach ($messages as $message)
-            <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
-                <blockquote>
-                    <p class="text-lg font-medium">
-                        {{$message->getContent()}}
-                    </p>
-                </blockquote>
+            <div class="flex font-serif">
+                <div class="flex-none w-52 relative">
+                    <p>Platzhalter Metadaten</p>
+                </div>
+                <div class="flex flex-wrap items-baseline">
+                    <blockquote>
+                        <p class="text-lg font-medium">
+                            {{$message->getContent()}}
+                        </p>
+                    </blockquote>
+                </div>
             </div>
         @endforeach
     </body>
