@@ -25,7 +25,7 @@
                     <blockquote>
                         <p class="text-lg font-medium">
                             {{$message->getContent()}}
-                            <a href="{{ URL::route('message') }}">(...)</a>
+                            <a href="{{ route('message', ['message' => $message]) }}">(...)</a>
                         </p>
                     </blockquote>
                 </div>

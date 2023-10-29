@@ -26,9 +26,7 @@ Route::get('/hello', function () {
     return view('hello' , ['name' => 'Daniel']); 
 });
 
-Route::get('/message', function () {
-    return view('message', ['message' => new Message('Welcome to Folksbook!')]);
-});
+Route::get('/message/{Message}', ['as' => 'message', 'uses' => 'App\Http\Controllers\MessageController@show']);
 
 Route::get('/portal', function () {
     $messages = [
